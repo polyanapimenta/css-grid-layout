@@ -1,0 +1,177 @@
+// * reset
+.content {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// * Grid layout
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.5fr;
+  grid-template-rows: 1fr 4fr 3fr 2fr;
+  height: 100vh;
+}
+
+header {
+  // GRID PARENT
+  grid-column: 3/4;
+  grid-row: 1/2;
+  background-color: #ffffff;
+
+  // GRID CHILD
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+}
+
+nav {
+  grid-column: 1/2;
+  
+  ul.header__childgrid-one {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+    
+    li > a {
+      font-weight: 600;
+      color: #212121;
+    }
+  }
+}
+
+div.header__childgrid-two {
+  justify-content: space-around;
+  
+  a {
+    font-weight: 600;
+    color: #e84393;
+  }
+
+  i {
+    cursor: pointer;
+    font-size: 2rem;
+  }
+}
+
+main {
+  // GRID PARENT
+  grid-column: 1/3; // 2 columns
+  grid-row: 1/3;    // 2 rows
+  padding: 1rem 6rem;
+  background-color: #fffadf;
+
+  // GRID CHILD
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+}
+
+div.main__childgrid-one {
+  h1 {
+    color: #e84393;
+  }
+}
+
+div.main__childgrid-two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 3rem;
+  
+  h2 {
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+}
+
+section.nom {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  justify-content: center;
+  background-color: #e84393;
+
+  p {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+
+    &:after, 
+    &:before {
+      content: "";
+      display: inline-block;
+      border-bottom: 0.1rem solid #ffffff;
+      width: 5rem;
+      transform: translateY(-0.3rem);
+    }
+  }
+}
+
+section.yum {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-content: center;
+  background-color: #333333;
+  
+  p {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+
+    &:after, 
+    &:before {
+      content: "";
+      display: inline-block;
+      border-bottom: .1rem solid #ffffff;
+      width: 7rem;
+      transform: translateY(-0.3rem);
+    }
+  }
+}
+
+section.diabeetus {
+  grid-column: 1/3;
+  grid-row: 4/5;
+  justify-content: center;
+  background-color: #202020;
+
+  p {
+    color: rgba($color: #ffffff, $alpha: 0.2);
+    font-size: 1.8rem;
+  }
+}
+
+div.candy {
+  grid-column: 3/4;
+  grid-row: 2/5;
+  background-image: url('../images/candy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
