@@ -1,9 +1,9 @@
 # CSS Grid Layout
-Exemplo prático da implementação de CSS Grid.
+Exemplos práticos da implementação de CSS Grid.  
 
 
 ## Demo - 1 (index)
-![](images/demo.gif)
+![](images/demo.gif)  
 
 
 ## Demo - 2 (candify)
